@@ -14,7 +14,7 @@ struct SearchResults: View {
                     .padding(.top, 60)
                     .padding(.horizontal, 20)
 
-                // Sub-title with highlighted words (Refactored to separate Text elements)
+                // Sub-title with highlighted words
                 HStack {
                     Text("like ")
                         .foregroundColor(.white)
@@ -30,14 +30,18 @@ struct SearchResults: View {
 
                 // List of users
                 ScrollView {
-                    VStack(spacing: 20) {
+                    VStack(spacing: 0) {
                         // User 1
                         SearchResultRow(imageName: "user1", name: "Casey, 22, Williamsburg, NY", description: "Casey grew up deep sea fishing, was in Sigma Nu fraternity at CU Boulder, and loves skating")
+
+                        Divider().background(Color.white) // Line between users
 
                         // User 2 with NavigationLink to SearchProfile
                         NavigationLink(destination: SearchProfile()) {
                             SearchResultRow(imageName: "user2", name: "Jackson, 24, East Village, NY", description: "Jackson is an expert fly fisherman, was in Pi Kappa Phi fraternity at CU Boulder, and has been recently getting back into skating")
                         }
+
+                        Divider().background(Color.white) // Line between users
 
                         // User 3
                         SearchResultRow(imageName: "user3", name: "Billy, 23, Lower East Side, NY", description: "Billy fished casually as a kid, but is looking to advance his skill, was in Phi Delta Theta fraternity at University of Utah, and is fascinated by skate culture")
@@ -72,14 +76,14 @@ struct SearchResultRow: View {
     var description: String
 
     var body: some View {
-        HStack {
-            // Image placeholder (you can replace this with actual image)
-            Image(systemName: "person.crop.circle.fill")
+        HStack(alignment: .top, spacing: 16) {
+            // Square Profile Picture with fixed width
+            Image(systemName: "person.crop.square.fill") // Placeholder square icon
                 .resizable()
                 .frame(width: 60, height: 60)
                 .foregroundColor(.gray)
 
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(name)
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
@@ -88,9 +92,10 @@ struct SearchResultRow: View {
                     .font(.system(size: 14))
                     .foregroundColor(.white.opacity(0.8))
             }
+            Spacer() // Pushes the content to the left for alignment
         }
+        .frame(maxWidth: .infinity, alignment: .leading) // Ensures alignment within HStack
         .padding(.vertical, 10)
-        .overlay(Divider().background(Color.white), alignment: .bottom)
     }
 }
 

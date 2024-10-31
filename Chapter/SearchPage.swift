@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SearchPage: View {
+    @State private var dotCount = 0
+    
     var body: some View {
         ZStack {
             Color(red: 0.04, green: 0.04, blue: 0.04)
@@ -8,31 +10,32 @@ struct SearchPage: View {
             
             VStack {
                 HStack {
-                    // Link the mail icon to Inbox
-                    NavigationLink(destination: Inbox()) {
-                        Image(systemName: "envelope")
-                            .resizable()
-                            .frame(width: 28, height: 22)
-                            .foregroundColor(.white)
+                    // Message and Profile icons aligned on the left
+                    HStack(spacing: 20) { // Adjust spacing as needed
+                        // Link the mail icon to Inbox
+                        NavigationLink(destination: Inbox()) {
+                            Image(systemName: "envelope")
+                                .resizable()
+                                .frame(width: 34, height: 28) // Adjust size if needed
+                                .foregroundColor(.white)
+                        }
+                        
+                        // Profile icon with NavigationLink to UserProfile
+                        NavigationLink(destination: UserProfile()) {
+                            Image(systemName: "person.crop.circle")
+                                .resizable()
+                                .frame(width: 34, height: 34) // Adjust size if needed
+                                .foregroundColor(.white)
+                        }
                     }
-
-                    Spacer()
-
-                    // Profile icon with NavigationLink to UserProfile
-                    NavigationLink(destination: UserProfile()) {
-                        Image(systemName: "person.crop.circle")
-                            .resizable()
-                            .frame(width: 28, height: 28)
-                            .foregroundColor(.white)
-                    }
-
-                    Spacer()
-
+                    
+                    Spacer() // Push settings icon to the right
+                    
                     // Link the gear icon to Settings
                     NavigationLink(destination: Settings()) {
                         Image(systemName: "gearshape")
                             .resizable()
-                            .frame(width: 28, height: 28)
+                            .frame(width: 34, height: 34) // Adjust size if needed
                             .foregroundColor(.white)
                     }
                 }
@@ -41,14 +44,21 @@ struct SearchPage: View {
 
                 Spacer()
 
-                // Main prompt text
-                Text("FIND ME\nSOMEONE WHO..")
+                // Main prompt text with animated dots
+                Text("FIND ME\nSOMEONE WHO" + String(repeating: ".", count: dotCount))
                     .font(.custom("Inter", size: 32))
                     .foregroundColor(Color(red: 0.93, green: 0.93, blue: 0.93))
                     .multilineTextAlignment(.leading)
                     .frame(width: 285, height: 78, alignment: .leading)
+                    .padding(.top, -150) // Move text higher
+                    .onAppear {
+                        // Start timer to update the dots
+                        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
+                            dotCount = (dotCount + 1) % 4 // Cycle between 0, 1, 2, and 3 dots
+                        }
+                    }
 
-                // Search bar with arrow icon
+                // Centered Search bar with extra spacing
                 ZStack(alignment: .trailing) {
                     RoundedRectangle(cornerRadius: 1)
                         .stroke(Color(red: 0.93, green: 0.93, blue: 0.93), lineWidth: 3)
@@ -61,6 +71,7 @@ struct SearchPage: View {
                             .padding(.trailing, 10)
                     }
                 }
+                .padding(.top, 10) // Space between text and search bar
 
                 Spacer()
 
@@ -71,7 +82,6 @@ struct SearchPage: View {
                     .padding(.bottom, 30)
             }
         }
-        .frame(width: 393, height: 852)
         .navigationBarHidden(true) // Hide the navigation bar
     }
 }
@@ -84,3 +94,4 @@ struct LandingPageView_Previews: PreviewProvider {
         }
     }
 }
+

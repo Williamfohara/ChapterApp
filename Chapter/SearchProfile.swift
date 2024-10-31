@@ -5,48 +5,53 @@ struct SearchProfile: View {
         ZStack {
             Color(red: 0.04, green: 0.04, blue: 0.04)
                 .edgesIgnoringSafeArea(.all)
-            
+
             VStack(alignment: .leading, spacing: 20) {
-                // Profile Picture and Close Icon
-                HStack {
-                    Image("PNGimage1") // No need to include .png extension
+                // Profile Picture, Name, Location, and Close Icon
+                HStack(alignment: .top) {
+                    // Profile Picture
+                    Image("PNGimage1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 80, height: 80)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
+                    
+                    // Add Spacer to push the name and location to the right
+                    Spacer(minLength: 20)
+                    
+                    // Name and Location
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Jackson, 23")
+                            .font(.system(size: 28, weight: .bold))
+                            .foregroundColor(.white)
+
+                        Text("San Diego, CA")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color(red: 0.32, green: 0.78, blue: 0.56))
+                    }
 
                     Spacer()
 
+                    // Close Icon
                     Button(action: {
-                        // Close action - Add any action needed
+                        // Close action
                     }) {
                         Image(systemName: "xmark")
                             .font(.system(size: 24))
                             .foregroundColor(.white)
                     }
                 }
-                .padding(.horizontal, 20)
-
-                // Profile Information (Name, Age, Location)
-                Text("Jackson, 23")
-                    .font(.system(size: 28, weight: .bold))
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 20)
-
-                Text("San Diego, CA")
-                    .font(.system(size: 20))
-                    .foregroundColor(Color(red: 0.32, green: 0.78, blue: 0.56))
-                    .padding(.horizontal, 20)
+                .padding(.horizontal)
 
                 Divider()
                     .background(Color.white)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal)
 
                 // Profile Description
                 Text("tldr: Financial analyst and founder of Tech Towel, Jackson Schneider, is passionate about surfing, festivals, and growing his brand while seeking like-minded connections in San Diego.")
                     .font(.system(size: 16))
                     .foregroundColor(.white)
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal)
                     .padding(.vertical, 10)
 
                 // Section: Career & Ambitions
@@ -97,9 +102,9 @@ struct SearchProfile: View {
                 }
                 .padding(.bottom, 40)
             }
+            .padding(.horizontal, 0)
             .padding(.top, 20)
         }
-        .frame(width: 393, height: 852)
     }
 }
 

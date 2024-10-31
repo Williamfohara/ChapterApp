@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct OnboardingGoals: View {
+struct Goals: View {
     var body: some View {
         ZStack {
             // Background color
@@ -57,6 +57,6 @@ struct OnboardingGoals: View {
 
 struct OnboardingGoals_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingGoals()
+        Goals()
     }
 }

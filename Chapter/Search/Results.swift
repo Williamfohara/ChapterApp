@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SearchResults: View {
+struct Results: View {
     var body: some View {
         ZStack {
             // Background color
@@ -37,7 +37,7 @@ struct SearchResults: View {
                         Divider().background(Color.white) // Line between users
 
                         // User 2 with NavigationLink to SearchProfile
-                        NavigationLink(destination: SearchProfile()) {
+                        NavigationLink(destination: OtherProfile()) {
                             SearchResultRow(imageName: "user2", name: "Jackson, 24, East Village, NY", description: "Jackson is an expert fly fisherman, was in Pi Kappa Phi fraternity at CU Boulder, and has been recently getting back into skating")
                         }
 
@@ -54,7 +54,7 @@ struct SearchResults: View {
                 // Back arrow at the bottom
                 HStack {
                     Spacer()
-                    NavigationLink(destination: SearchPage()) {
+                    NavigationLink(destination: HomePage()) {
                         Image(systemName: "arrow.left")
                             .resizable()
                             .frame(width: 24, height: 24)
@@ -101,6 +101,6 @@ struct SearchResultRow: View {
 
 struct SearchResults_Previews: PreviewProvider {
     static var previews: some View {
-        SearchResults()
+        Results()
     }
 }

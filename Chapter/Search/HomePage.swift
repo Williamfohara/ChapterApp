@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SearchPage: View {
+struct HomePage: View {
     @State private var dotCount = 0
     
     var body: some View {
@@ -64,7 +64,7 @@ struct SearchPage: View {
                         .stroke(Color(red: 0.93, green: 0.93, blue: 0.93), lineWidth: 3)
                         .frame(width: 285, height: 39)
 
-                    NavigationLink(destination: SearchResults()) {
+                    NavigationLink(destination: Results()) {
                         Image(systemName: "arrow.right")
                             .foregroundColor(Color(red: 0.93, green: 0.93, blue: 0.93))
                             .font(.system(size: 20))
@@ -90,7 +90,7 @@ struct SearchPage: View {
 struct LandingPageView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SearchPage()
+            HomePage()
         }
     }
 }

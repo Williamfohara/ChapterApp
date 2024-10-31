@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct OnboardingInstructions: View {
+struct Instructions: View {
     var body: some View {
         NavigationView {
             ZStack {
@@ -46,7 +46,7 @@ struct OnboardingInstructions: View {
                     }
 
                     // Arrow centered at the bottom with NavigationLink
-                    NavigationLink(destination: OnboardingYou()) {
+                    NavigationLink(destination: YouPage()) {
                         Image(systemName: "arrow.right")
                             .resizable()
                             .frame(width: 24, height: 24)
@@ -63,6 +63,6 @@ struct OnboardingInstructions: View {
 
 struct OnboardingInstructions_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingInstructions()
+        Instructions()
     }
 }

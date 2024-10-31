@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct OnboardingCreateAccount: View {
+struct CreateAccount: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
@@ -84,6 +84,6 @@ struct OnboardingCreateAccount: View {
 
 struct OnboardingCreateAccount_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingCreateAccount()
+        CreateAccount()
     }
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct OnboardingYou: View {
+struct YouPage: View {
     @State private var firstName = ""
     @State private var city = ""
     @State private var age = ""
@@ -43,7 +43,7 @@ struct OnboardingYou: View {
                 HStack {
                     Spacer()
 
-                    NavigationLink(destination: OnboardingInterests()) { // Link to next page
+                    NavigationLink(destination: Interests()) { // Link to next page
                         Image(systemName: "arrow.right")
                             .resizable()
                             .frame(width: 24, height: 24)
@@ -61,6 +61,6 @@ struct OnboardingYou: View {
 
 struct OnboardingYou_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingYou()
+        YouPage()
     }
 }

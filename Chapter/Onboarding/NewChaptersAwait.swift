@@ -31,7 +31,7 @@ struct NewChaptersAwait: View {
                 // Arrow button at the bottom with NavigationLink to SearchPage
                 HStack {
                     Spacer()
-                    NavigationLink(destination: SearchPage()) {
+                    NavigationLink(destination: HomePage()) {
                         Image(systemName: "arrow.right")
                             .resizable()
                             .frame(width: 24, height: 24)

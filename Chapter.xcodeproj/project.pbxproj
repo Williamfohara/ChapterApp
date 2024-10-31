@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E175432F2CD3D5E600C57669 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = E175432E2CD3D5E600C57669 /* Auth */; };
+		E17543312CD3D5E600C57669 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = E17543302CD3D5E600C57669 /* Functions */; };
+		E17543332CD3D5E600C57669 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = E17543322CD3D5E600C57669 /* PostgREST */; };
+		E17543352CD3D5E600C57669 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = E17543342CD3D5E600C57669 /* Realtime */; };
+		E17543372CD3D5E600C57669 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = E17543362CD3D5E600C57669 /* Storage */; };
+		E17543392CD3D5E600C57669 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = E17543382CD3D5E600C57669 /* Supabase */; };
 		E1E71BB22CD0850C0027BF03 /* ChapterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BB12CD0850C0027BF03 /* ChapterApp.swift */; };
 		E1E71BB42CD0850C0027BF03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BB32CD0850C0027BF03 /* ContentView.swift */; };
 		E1E71BB62CD0850D0027BF03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E71BB52CD0850D0027BF03 /* Assets.xcassets */; };
@@ -17,17 +23,17 @@
 		E1E71BDC2CD087C50027BF03 /* NewChaptersAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BDB2CD087C50027BF03 /* NewChaptersAwait.swift */; };
 		E1E71BDE2CD087EB0027BF03 /* Inbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BDD2CD087EB0027BF03 /* Inbox.swift */; };
 		E1E71BE02CD088030027BF03 /* MessageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BDF2CD088030027BF03 /* MessageUser.swift */; };
-		E1E71BE22CD088320027BF03 /* OnboardingCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE12CD088320027BF03 /* OnboardingCreateAccount.swift */; };
-		E1E71BE42CD088510027BF03 /* OnboardingGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE32CD088510027BF03 /* OnboardingGoals.swift */; };
-		E1E71BE62CD088720027BF03 /* OnboardingInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE52CD088720027BF03 /* OnboardingInstructions.swift */; };
-		E1E71BE82CD088880027BF03 /* OnboardingInterests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE72CD088880027BF03 /* OnboardingInterests.swift */; };
-		E1E71BEA2CD0889D0027BF03 /* OnboardingIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE92CD0889D0027BF03 /* OnboardingIntro.swift */; };
-		E1E71BEC2CD088BE0027BF03 /* OnboardingYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BEB2CD088BE0027BF03 /* OnboardingYou.swift */; };
-		E1E71BEE2CD088D30027BF03 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BED2CD088D30027BF03 /* SearchPage.swift */; };
-		E1E71BF02CD088E90027BF03 /* SearchProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BEF2CD088E90027BF03 /* SearchProfile.swift */; };
-		E1E71BF22CD088FD0027BF03 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BF12CD088FD0027BF03 /* SearchResults.swift */; };
+		E1E71BE22CD088320027BF03 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE12CD088320027BF03 /* CreateAccount.swift */; };
+		E1E71BE42CD088510027BF03 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE32CD088510027BF03 /* Goals.swift */; };
+		E1E71BE62CD088720027BF03 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE52CD088720027BF03 /* Instructions.swift */; };
+		E1E71BE82CD088880027BF03 /* Interests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE72CD088880027BF03 /* Interests.swift */; };
+		E1E71BEA2CD0889D0027BF03 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BE92CD0889D0027BF03 /* Intro.swift */; };
+		E1E71BEC2CD088BE0027BF03 /* YouPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BEB2CD088BE0027BF03 /* YouPage.swift */; };
+		E1E71BEE2CD088D30027BF03 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BED2CD088D30027BF03 /* HomePage.swift */; };
+		E1E71BF02CD088E90027BF03 /* OtherProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BEF2CD088E90027BF03 /* OtherProfile.swift */; };
+		E1E71BF22CD088FD0027BF03 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BF12CD088FD0027BF03 /* Results.swift */; };
 		E1E71BF42CD089180027BF03 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BF32CD089180027BF03 /* Settings.swift */; };
-		E1E71BF62CD0893F0027BF03 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BF52CD0893F0027BF03 /* SharedComponents.swift */; };
+		E1E71BF62CD0893F0027BF03 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BF52CD0893F0027BF03 /* SectionView.swift */; };
 		E1E71BF82CD089560027BF03 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E71BF72CD089560027BF03 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,17 +68,17 @@
 		E1E71BDB2CD087C50027BF03 /* NewChaptersAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChaptersAwait.swift; sourceTree = "<group>"; };
 		E1E71BDD2CD087EB0027BF03 /* Inbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.swift; sourceTree = "<group>"; };
 		E1E71BDF2CD088030027BF03 /* MessageUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageUser.swift; sourceTree = "<group>"; };
-		E1E71BE12CD088320027BF03 /* OnboardingCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCreateAccount.swift; sourceTree = "<group>"; };
-		E1E71BE32CD088510027BF03 /* OnboardingGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGoals.swift; sourceTree = "<group>"; };
-		E1E71BE52CD088720027BF03 /* OnboardingInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInstructions.swift; sourceTree = "<group>"; };
-		E1E71BE72CD088880027BF03 /* OnboardingInterests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInterests.swift; sourceTree = "<group>"; };
-		E1E71BE92CD0889D0027BF03 /* OnboardingIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntro.swift; sourceTree = "<group>"; };
-		E1E71BEB2CD088BE0027BF03 /* OnboardingYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingYou.swift; sourceTree = "<group>"; };
-		E1E71BED2CD088D30027BF03 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
-		E1E71BEF2CD088E90027BF03 /* SearchProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProfile.swift; sourceTree = "<group>"; };
-		E1E71BF12CD088FD0027BF03 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		E1E71BE12CD088320027BF03 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		E1E71BE32CD088510027BF03 /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		E1E71BE52CD088720027BF03 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		E1E71BE72CD088880027BF03 /* Interests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interests.swift; sourceTree = "<group>"; };
+		E1E71BE92CD0889D0027BF03 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
+		E1E71BEB2CD088BE0027BF03 /* YouPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouPage.swift; sourceTree = "<group>"; };
+		E1E71BED2CD088D30027BF03 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		E1E71BEF2CD088E90027BF03 /* OtherProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfile.swift; sourceTree = "<group>"; };
+		E1E71BF12CD088FD0027BF03 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		E1E71BF32CD089180027BF03 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		E1E71BF52CD0893F0027BF03 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		E1E71BF52CD0893F0027BF03 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		E1E71BF72CD089560027BF03 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17543332CD3D5E600C57669 /* PostgREST in Frameworks */,
+				E17543312CD3D5E600C57669 /* Functions in Frameworks */,
+				E17543392CD3D5E600C57669 /* Supabase in Frameworks */,
+				E175432F2CD3D5E600C57669 /* Auth in Frameworks */,
+				E17543372CD3D5E600C57669 /* Storage in Frameworks */,
+				E17543352CD3D5E600C57669 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +113,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E175433A2CD3DD9B00C57669 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E1E71BE12CD088320027BF03 /* CreateAccount.swift */,
+				E1E71BE92CD0889D0027BF03 /* Intro.swift */,
+				E1E71BE52CD088720027BF03 /* Instructions.swift */,
+				E1E71BEB2CD088BE0027BF03 /* YouPage.swift */,
+				E1E71BE72CD088880027BF03 /* Interests.swift */,
+				E1E71BE32CD088510027BF03 /* Goals.swift */,
+				E1E71BDB2CD087C50027BF03 /* NewChaptersAwait.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E175433B2CD3DDC400C57669 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E1E71BED2CD088D30027BF03 /* HomePage.swift */,
+				E1E71BF12CD088FD0027BF03 /* Results.swift */,
+				E1E71BEF2CD088E90027BF03 /* OtherProfile.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E175433C2CD3DE0E00C57669 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				E1E71BDD2CD087EB0027BF03 /* Inbox.swift */,
+				E1E71BDF2CD088030027BF03 /* MessageUser.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
+		E175433D2CD3DE2500C57669 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E1E71BF72CD089560027BF03 /* UserProfile.swift */,
+				E1E71BF32CD089180027BF03 /* Settings.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E175433E2CD3DE4D00C57669 /* AppCore */ = {
+			isa = PBXGroup;
+			children = (
+				E1E71BB12CD0850C0027BF03 /* ChapterApp.swift */,
+				E1E71BB32CD0850C0027BF03 /* ContentView.swift */,
+			);
+			path = AppCore;
+			sourceTree = "<group>";
+		};
+		E175433F2CD3DE8E00C57669 /* SharedComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E1E71BF52CD0893F0027BF03 /* SectionView.swift */,
+			);
+			path = SharedComponents;
+			sourceTree = "<group>";
+		};
+		E17543402CD3DEF000C57669 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		E17543412CD3DEF600C57669 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E17543422CD3DEFE00C57669 /* Auth */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E17543422CD3DEFE00C57669 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		E1E71BA52CD0850B0027BF03 = {
 			isa = PBXGroup;
 			children = (
@@ -124,25 +217,16 @@
 		E1E71BB02CD0850C0027BF03 /* Chapter */ = {
 			isa = PBXGroup;
 			children = (
-				E1E71BB12CD0850C0027BF03 /* ChapterApp.swift */,
-				E1E71BB32CD0850C0027BF03 /* ContentView.swift */,
+				E17543412CD3DEF600C57669 /* Managers */,
+				E17543402CD3DEF000C57669 /* SignIn */,
+				E175433F2CD3DE8E00C57669 /* SharedComponents */,
+				E175433E2CD3DE4D00C57669 /* AppCore */,
+				E175433D2CD3DE2500C57669 /* Profile */,
+				E175433C2CD3DE0E00C57669 /* Messaging */,
+				E175433B2CD3DDC400C57669 /* Search */,
+				E175433A2CD3DD9B00C57669 /* Onboarding */,
 				E1E71BB52CD0850D0027BF03 /* Assets.xcassets */,
 				E1E71BB72CD0850D0027BF03 /* Preview Content */,
-				E1E71BDB2CD087C50027BF03 /* NewChaptersAwait.swift */,
-				E1E71BDD2CD087EB0027BF03 /* Inbox.swift */,
-				E1E71BDF2CD088030027BF03 /* MessageUser.swift */,
-				E1E71BE12CD088320027BF03 /* OnboardingCreateAccount.swift */,
-				E1E71BE32CD088510027BF03 /* OnboardingGoals.swift */,
-				E1E71BE52CD088720027BF03 /* OnboardingInstructions.swift */,
-				E1E71BE72CD088880027BF03 /* OnboardingInterests.swift */,
-				E1E71BE92CD0889D0027BF03 /* OnboardingIntro.swift */,
-				E1E71BEB2CD088BE0027BF03 /* OnboardingYou.swift */,
-				E1E71BED2CD088D30027BF03 /* SearchPage.swift */,
-				E1E71BEF2CD088E90027BF03 /* SearchProfile.swift */,
-				E1E71BF12CD088FD0027BF03 /* SearchResults.swift */,
-				E1E71BF32CD089180027BF03 /* Settings.swift */,
-				E1E71BF52CD0893F0027BF03 /* SharedComponents.swift */,
-				E1E71BF72CD089560027BF03 /* UserProfile.swift */,
 			);
 			path = Chapter;
 			sourceTree = "<group>";
@@ -188,6 +272,14 @@
 			dependencies = (
 			);
 			name = Chapter;
+			packageProductDependencies = (
+				E175432E2CD3D5E600C57669 /* Auth */,
+				E17543302CD3D5E600C57669 /* Functions */,
+				E17543322CD3D5E600C57669 /* PostgREST */,
+				E17543342CD3D5E600C57669 /* Realtime */,
+				E17543362CD3D5E600C57669 /* Storage */,
+				E17543382CD3D5E600C57669 /* Supabase */,
+			);
 			productName = Chapter;
 			productReference = E1E71BAE2CD0850C0027BF03 /* Chapter.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +352,9 @@
 				Base,
 			);
 			mainGroup = E1E71BA52CD0850B0027BF03;
+			packageReferences = (
+				E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = E1E71BAF2CD0850C0027BF03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -302,22 +397,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E71BF02CD088E90027BF03 /* SearchProfile.swift in Sources */,
+				E1E71BF02CD088E90027BF03 /* OtherProfile.swift in Sources */,
 				E1E71BB42CD0850C0027BF03 /* ContentView.swift in Sources */,
 				E1E71BE02CD088030027BF03 /* MessageUser.swift in Sources */,
-				E1E71BEE2CD088D30027BF03 /* SearchPage.swift in Sources */,
-				E1E71BF22CD088FD0027BF03 /* SearchResults.swift in Sources */,
-				E1E71BE82CD088880027BF03 /* OnboardingInterests.swift in Sources */,
+				E1E71BEE2CD088D30027BF03 /* HomePage.swift in Sources */,
+				E1E71BF22CD088FD0027BF03 /* Results.swift in Sources */,
+				E1E71BE82CD088880027BF03 /* Interests.swift in Sources */,
 				E1E71BB22CD0850C0027BF03 /* ChapterApp.swift in Sources */,
 				E1E71BDE2CD087EB0027BF03 /* Inbox.swift in Sources */,
-				E1E71BE42CD088510027BF03 /* OnboardingGoals.swift in Sources */,
+				E1E71BE42CD088510027BF03 /* Goals.swift in Sources */,
 				E1E71BF42CD089180027BF03 /* Settings.swift in Sources */,
-				E1E71BEC2CD088BE0027BF03 /* OnboardingYou.swift in Sources */,
-				E1E71BE22CD088320027BF03 /* OnboardingCreateAccount.swift in Sources */,
-				E1E71BEA2CD0889D0027BF03 /* OnboardingIntro.swift in Sources */,
+				E1E71BEC2CD088BE0027BF03 /* YouPage.swift in Sources */,
+				E1E71BE22CD088320027BF03 /* CreateAccount.swift in Sources */,
+				E1E71BEA2CD0889D0027BF03 /* Intro.swift in Sources */,
 				E1E71BDC2CD087C50027BF03 /* NewChaptersAwait.swift in Sources */,
-				E1E71BF62CD0893F0027BF03 /* SharedComponents.swift in Sources */,
-				E1E71BE62CD088720027BF03 /* OnboardingInstructions.swift in Sources */,
+				E1E71BF62CD0893F0027BF03 /* SectionView.swift in Sources */,
+				E1E71BE62CD088720027BF03 /* Instructions.swift in Sources */,
 				E1E71BF82CD089560027BF03 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +743,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E175432E2CD3D5E600C57669 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		E17543302CD3D5E600C57669 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		E17543322CD3D5E600C57669 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		E17543342CD3D5E600C57669 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		E17543362CD3D5E600C57669 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		E17543382CD3D5E600C57669 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E175432D2CD3D5E500C57669 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1E71BA62CD0850B0027BF03 /* Project object */;
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct OnboardingInterests: View {
+struct Interests: View {
     @State private var favoriteThings = ""
     @State private var currentInterests = ""
     @State private var improvingSkills = ""
@@ -42,7 +42,7 @@ struct OnboardingInterests: View {
                 // Arrow button at the bottom with NavigationLink to OnboardingGoals
                 HStack {
                     Spacer()
-                    NavigationLink(destination: OnboardingGoals()) {
+                    NavigationLink(destination: Goals()) {
                         Image(systemName: "arrow.right")
                             .resizable()
                             .frame(width: 24, height: 24)
@@ -87,6 +87,6 @@ struct CustomTextField: View {
 // Preview
 struct OnboardingInterests_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingInterests()
+        Interests()
     }
 }

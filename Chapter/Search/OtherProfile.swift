@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SearchProfile: View {
+struct OtherProfile: View {
     var body: some View {
         ZStack {
             Color(red: 0.04, green: 0.04, blue: 0.04)
@@ -111,6 +111,6 @@ struct SearchProfile: View {
 // Preview
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchProfile()
+        OtherProfile()
     }
 }

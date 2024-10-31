@@ -71,7 +71,7 @@ struct Settings: View {
                 // Back arrow at the bottom
                 HStack {
                     Spacer()
-                    NavigationLink(destination: SearchPage()) {
+                    NavigationLink(destination: HomePage()) {
                         Image(systemName: "arrow.left")
                             .resizable()
                             .frame(width: 24, height: 24)

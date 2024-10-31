@@ -11,7 +11,7 @@ import SwiftUI
 struct ChapterApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingIntro()
+            Intro()
         }
     }
 }

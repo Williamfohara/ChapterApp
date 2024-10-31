@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct OtherProfile: View {
+    @State private var isSharePresented = false
+    
     var body: some View {
         ZStack {
             Color(red: 0.04, green: 0.04, blue: 0.04)
@@ -16,7 +18,6 @@ struct OtherProfile: View {
                         .frame(width: 80, height: 80)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     
-                    // Add Spacer to push the name and location to the right
                     Spacer(minLength: 20)
                     
                     // Name and Location
@@ -89,13 +90,17 @@ struct OtherProfile: View {
                     Spacer()
 
                     Button(action: {
-                        // Share action
+                        isSharePresented = true
                     }) {
                         Text("Share")
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.white)
                             .frame(width: 120, height: 40)
                             .background(RoundedRectangle(cornerRadius: 8).stroke(Color.white, lineWidth: 2))
+                    }
+                    .sheet(isPresented: $isSharePresented) {
+                        // Open the share sheet with various options
+                        ActivityViewController(activityItems: ["Check out Jackson's profile on Chapter App!"])
                     }
 
                     Spacer()
@@ -106,6 +111,18 @@ struct OtherProfile: View {
             .padding(.top, 20)
         }
     }
+}
+
+// UIViewControllerRepresentable to present the Activity (Share) Sheet
+struct ActivityViewController: UIViewControllerRepresentable {
+    var activityItems: [Any]
+    var applicationActivities: [UIActivity]? = nil
+
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        return UIActivityViewController(activityItems: activityItems, applicationActivities: applicationActivities)
+    }
+
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
 // Preview

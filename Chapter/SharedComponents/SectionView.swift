@@ -18,3 +18,4 @@ struct SectionView: View {
         .padding(.horizontal, 20)
     }
 }
+

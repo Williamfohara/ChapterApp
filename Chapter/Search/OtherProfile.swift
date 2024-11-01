@@ -2,7 +2,8 @@ import SwiftUI
 
 struct OtherProfile: View {
     @State private var isSharePresented = false
-    
+    @Environment(\.presentationMode) var presentationMode // Access the presentation mode to enable dismiss
+
     var body: some View {
         ZStack {
             Color(red: 0.04, green: 0.04, blue: 0.04)
@@ -11,12 +12,12 @@ struct OtherProfile: View {
             VStack(alignment: .leading, spacing: 20) {
                 // Profile Picture, Name, Location, and Close Icon
                 HStack(alignment: .top) {
-                    // Profile Picture
+                    // Square Profile Picture with rounded corners
                     Image("PNGimage1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 80, height: 80)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .clipShape(RoundedRectangle(cornerRadius: 10)) // Rounded rectangle for square profile picture
                     
                     Spacer(minLength: 20)
                     
@@ -33,9 +34,10 @@ struct OtherProfile: View {
 
                     Spacer()
 
-                    // Close Icon
+                    // Close Icon that acts as a back button
                     Button(action: {
-                        // Close action
+                        // Dismiss the view and go back to the previous screen
+                        presentationMode.wrappedValue.dismiss()
                     }) {
                         Image(systemName: "xmark")
                             .font(.system(size: 24))
@@ -56,19 +58,19 @@ struct OtherProfile: View {
                     .padding(.vertical, 10)
 
                 // Section: Career & Ambitions
-                SectionView(title: "Career & Ambitions:", description: """
+                ProfileSectionView(title: "Career & Ambitions:", description: """
                     • Financial analyst at Cubic Corp, based in San Diego
                     • Founder of Tech Towel, a festival accessory brand, focused on growing the brand through social media and collaborating with artists.
                     """)
 
                 // Section: Hobbies & Interests
-                SectionView(title: "Hobbies & Interests:", description: """
+                ProfileSectionView(title: "Hobbies & Interests:", description: """
                     • Passionate about surfing (3 years of experience) and always on the lookout for new breaks.
                     • Enjoys snowboarding, golfing, and DJing for fun, with a love for house/EDM music.
                     """)
 
                 // Section: Goals & Connections
-                SectionView(title: "Goals & Connections", description: """
+                ProfileSectionView(title: "Goals & Connections", description: """
                     • Interested in learning jiu-jitsu and expanding personal growth through new experiences.
                     • Seeking like-minded, ambitious people who share similar hobbies and goals, having recently moved to San Diego.
                     """)
@@ -110,6 +112,7 @@ struct OtherProfile: View {
             .padding(.horizontal, 0)
             .padding(.top, 20)
         }
+        .navigationBarBackButtonHidden(true) // Hide the default back button
     }
 }
 
@@ -123,6 +126,25 @@ struct ActivityViewController: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
+}
+
+// Renamed Section View to avoid conflicts
+struct ProfileSectionView: View {
+    var title: String
+    var description: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+            Text(description)
+                .font(.subheadline)
+                .foregroundColor(.white.opacity(0.8))
+        }
+        .padding(.horizontal)
+        .padding(.top, 10)
+    }
 }
 
 // Preview

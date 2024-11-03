@@ -10,7 +10,7 @@ struct CreateAccount: View {
             ZStack {
                 // Background color
                 Color.black.ignoresSafeArea()
-
+                
                 // Main content
                 VStack(spacing: 30) {
                     // Title Text
@@ -35,7 +35,7 @@ struct CreateAccount: View {
                             .autocapitalization(.none)
                     }
                     .padding(.horizontal, 20)
-
+                    
                     // Password Field
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Create a Password")
@@ -49,7 +49,7 @@ struct CreateAccount: View {
                             .foregroundColor(.white)
                     }
                     .padding(.horizontal, 20)
-
+                    
                     // Confirm Password Field
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Confirm Password")
@@ -65,7 +65,7 @@ struct CreateAccount: View {
                     .padding(.horizontal, 20)
                     
                     Spacer()
-
+                    
                     // Arrow Button at the Bottom
                     NavigationLink(destination: HomePage()) {
                         Image(systemName: "arrow.right")
@@ -80,5 +80,14 @@ struct CreateAccount: View {
             .navigationBarHidden(true) // Hide the navigation bar if desired
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        
     }
 }
+
+// Preview Provider for CreateAccount
+struct CreateAccount_Previews: PreviewProvider {
+    static var previews: some View {
+        CreateAccount()
+    }
+}
+

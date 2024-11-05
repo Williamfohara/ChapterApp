@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11242AF2CD7F98400295AC5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11242AE2CD7F98400295AC5 /* LoginPage.swift */; };
+		E11242B12CD7F9C000295AC5 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11242B02CD7F9C000295AC5 /* FirstPage.swift */; };
+		E11242B32CD7F9CD00295AC5 /* ExistingSignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11242B22CD7F9CD00295AC5 /* ExistingSignInPage.swift */; };
+		E11242B72CD7FF5C00295AC5 /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11242B62CD7FF5C00295AC5 /* SupabaseManager.swift */; };
 		E175432F2CD3D5E600C57669 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = E175432E2CD3D5E600C57669 /* Auth */; };
 		E17543312CD3D5E600C57669 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = E17543302CD3D5E600C57669 /* Functions */; };
 		E17543332CD3D5E600C57669 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = E17543322CD3D5E600C57669 /* PostgREST */; };
@@ -55,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E11242AE2CD7F98400295AC5 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		E11242B02CD7F9C000295AC5 /* FirstPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		E11242B22CD7F9CD00295AC5 /* ExistingSignInPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExistingSignInPage.swift; path = Chapter/Onboarding/ExistingSignInPage.swift; sourceTree = SOURCE_ROOT; };
+		E11242B62CD7FF5C00295AC5 /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
 		E1E71BAE2CD0850C0027BF03 /* Chapter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E71BB12CD0850C0027BF03 /* ChapterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterApp.swift; sourceTree = "<group>"; };
 		E1E71BB32CD0850C0027BF03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				E1E71BE12CD088320027BF03 /* CreateAccount.swift */,
+				E11242B02CD7F9C000295AC5 /* FirstPage.swift */,
 				E1E71BE92CD0889D0027BF03 /* Intro.swift */,
 				E1E71BE52CD088720027BF03 /* Instructions.swift */,
 				E1E71BEB2CD088BE0027BF03 /* YouPage.swift */,
@@ -175,6 +184,8 @@
 		E17543402CD3DEF000C57669 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				E11242AE2CD7F98400295AC5 /* LoginPage.swift */,
+				E11242B22CD7F9CD00295AC5 /* ExistingSignInPage.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -190,6 +201,7 @@
 		E17543422CD3DEFE00C57669 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				E11242B62CD7FF5C00295AC5 /* SupabaseManager.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -398,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E71BF02CD088E90027BF03 /* OtherProfile.swift in Sources */,
+				E11242AF2CD7F98400295AC5 /* LoginPage.swift in Sources */,
 				E1E71BB42CD0850C0027BF03 /* ContentView.swift in Sources */,
 				E1E71BE02CD088030027BF03 /* MessageUser.swift in Sources */,
 				E1E71BEE2CD088D30027BF03 /* HomePage.swift in Sources */,
@@ -406,6 +419,7 @@
 				E1E71BB22CD0850C0027BF03 /* ChapterApp.swift in Sources */,
 				E1E71BDE2CD087EB0027BF03 /* Inbox.swift in Sources */,
 				E1E71BE42CD088510027BF03 /* Goals.swift in Sources */,
+				E11242B12CD7F9C000295AC5 /* FirstPage.swift in Sources */,
 				E1E71BF42CD089180027BF03 /* Settings.swift in Sources */,
 				E1E71BEC2CD088BE0027BF03 /* YouPage.swift in Sources */,
 				E1E71BE22CD088320027BF03 /* CreateAccount.swift in Sources */,
@@ -413,7 +427,9 @@
 				E1E71BDC2CD087C50027BF03 /* NewChaptersAwait.swift in Sources */,
 				E1E71BF62CD0893F0027BF03 /* SectionView.swift in Sources */,
 				E1E71BE62CD088720027BF03 /* Instructions.swift in Sources */,
+				E11242B72CD7FF5C00295AC5 /* SupabaseManager.swift in Sources */,
 				E1E71BF82CD089560027BF03 /* UserProfile.swift in Sources */,
+				E11242B32CD7F9CD00295AC5 /* ExistingSignInPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

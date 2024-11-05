@@ -4,6 +4,8 @@ struct CreateAccount: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    @State private var signUpError = ""
+    @State private var isAccountCreated = false
     
     var body: some View {
         NavigationView {
@@ -64,9 +66,53 @@ struct CreateAccount: View {
                     }
                     .padding(.horizontal, 20)
                     
+                    // Display sign-up error if any
+                    if !signUpError.isEmpty {
+                        Text(signUpError)
+                            .foregroundColor(.red)
+                            .padding()
+                    }
+                    
+                    // Display success message if account is created
+                    if isAccountCreated {
+                        Text("Account created successfully!")
+                            .foregroundColor(.green)
+                            .padding()
+                    }
+                    
+                    // Sign-Up Button
+                    Button(action: {
+                        // Validate password confirmation
+                        guard password == confirmPassword else {
+                            signUpError = "Passwords do not match."
+                            return
+                        }
+                        
+                        // Call the Supabase sign-up function
+                        SupabaseManager.shared.signUp(email: email, password: password) { result in
+                            switch result {
+                            case .success:
+                                isAccountCreated = true
+                                signUpError = "" // Clear any previous error
+                                print("Account created successfully")
+                            case .failure(let error):
+                                signUpError = error.localizedDescription
+                            }
+                        }
+                    }) {
+                        Text("Create Account")
+                            .font(.system(size: 18, weight: .bold))
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                    .padding(.horizontal, 40)
+                    
                     Spacer()
                     
-                    // Arrow Button at the Bottom
+                    // Arrow Button at the Bottom to navigate (optional)
                     NavigationLink(destination: HomePage()) {
                         Image(systemName: "arrow.right")
                             .resizable()
@@ -80,7 +126,6 @@ struct CreateAccount: View {
             .navigationBarHidden(true) // Hide the navigation bar if desired
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        
     }
 }
 
@@ -90,4 +135,3 @@ struct CreateAccount_Previews: PreviewProvider {
         CreateAccount()
     }
 }
-

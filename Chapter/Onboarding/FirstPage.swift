@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FirstPage: View {
     @State private var showingLoginScreen = false
-    @State private var showingCreateAccountScreen = false
+    @State private var showingSignUpScreen = false
 
     // Define a consistent green color
     let chapterGreen = Color(red: 0.0, green: 0.47, blue: 0.32)
@@ -10,19 +10,20 @@ struct FirstPage: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background Color
+                // Background color
                 Color.black.ignoresSafeArea()
                 
                 VStack {
                     Spacer()
                     
-                    // App Name
-                    Text("CHAPTER")
-                        .font(.system(size: 50, weight: .bold))
+                    // App Title
+                    Text("WELCOME TO CHAPTER")
+                        .font(.system(size: 40, weight: .bold))
                         .foregroundColor(chapterGreen)
-                    
+                        .padding(.top, 40)
+
                     // Subtitle
-                    Text("Create an account or log in to get started")
+                    Text("Connect with people around you")
                         .font(.system(size: 18))
                         .foregroundColor(Color.white.opacity(0.8))
                         .padding(.top, 10)
@@ -44,18 +45,18 @@ struct FirstPage: View {
                     .padding(.horizontal, 40)
                     .padding(.top, 20)
                     .navigationDestination(isPresented: $showingLoginScreen) {
-                        HomePage() // Destination for Log In button
+                        HomePage() // Define `HomePage` separately
                     }
                     
-                    // "First time?" Text
-                    Text("First time?")
+                    // "New to Chapter?" Text
+                    Text("New to Chapter?")
                         .font(.system(size: 16))
                         .foregroundColor(Color.white.opacity(0.8))
                         .padding(.top, 10)
                     
                     // Sign Up Button styled like input boxes
                     Button(action: {
-                        showingCreateAccountScreen = true
+                        showingSignUpScreen = true
                     }) {
                         Text("Sign Up")
                             .font(.system(size: 18, weight: .bold))
@@ -67,15 +68,15 @@ struct FirstPage: View {
                     }
                     .padding(.horizontal, 40)
                     .padding(.top, 10)
-                    .navigationDestination(isPresented: $showingCreateAccountScreen) {
-                        CreateAccount() // Destination for Sign Up button
+                    .navigationDestination(isPresented: $showingSignUpScreen) {
+                        CreateAccount() // Define `CreateAccount` separately
                     }
                     
                     Spacer()
                     
                     // Forgot Password Link
                     Button(action: {
-                        // Forgot password action
+                        // Action for forgot password
                     }) {
                         Text("Forgot password?")
                             .font(.system(size: 16))
@@ -89,3 +90,8 @@ struct FirstPage: View {
     }
 }
 
+struct FirstPage_Previews: PreviewProvider {
+    static var previews: some View {
+        FirstPage()
+    }
+}
